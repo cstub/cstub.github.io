@@ -11,7 +11,7 @@ This article introduces an internet search tool based on [Retrieval-Augmented Ge
 
 The tool is designed for local deployment, utilizing smaller open LLMs (specifically [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF)) and a local metasearch engine. This setup eliminates the need for external search-API keys.
 
-To dive straight into using the tool, skip ahead to the [Usage and examples](#usage-and-examples) section or run the accompanying [notebook](https://github.com/krasserm/bot-with-plan/blob/wip-article-internet-search/internet_search.ipynb).
+To dive straight into using the tool, skip ahead to the [Usage and examples](#usage-and-examples) section or run the accompanying [notebook](https://github.com/krasserm/bot-with-plan/blob/master/internet_search.ipynb).
 
 ### Improving Search Accuracy and Relevance with RAG
 
@@ -207,5 +207,5 @@ In this article, we discussed the capabilities and design of a RAG-based interne
 
 ### Links
 
-* [Notebook](https://github.com/krasserm/bot-with-plan/blob/wip-article-internet-search/internet_search.ipynb)
+* [Notebook](https://github.com/krasserm/bot-with-plan/blob/master/internet_search.ipynb)
 * [Repository](https://github.com/krasserm/bot-with-plan)
