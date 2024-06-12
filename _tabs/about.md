@@ -3,9 +3,7 @@ icon: fas fa-info-circle
 order: 1
 ---
 
-### About me
-
-As a Machine Learning Engineer and AI Engineer, my expertise lies at the intersection of AI innovation and practical application.
+As a Machine Learning and AI Engineer, my expertise lies at the intersection of AI innovation and practical application.
 I develop and deploy machine learning and deep learning models, specializing in constructing robust machine learning systems from concept to large-scale production environments. My expertise includes tailoring algorithms to business needs, optimizing performance, and ensuring scalable integration into existing technologies.
 I am deeply interested in machine learning and deep learning methodologies, consistently striving to keep up-to-date with the latest developments in the field.
 
