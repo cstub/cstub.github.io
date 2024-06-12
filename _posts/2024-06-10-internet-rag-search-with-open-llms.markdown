@@ -20,7 +20,7 @@ Answering questions with large language models (LLMs) alone faces two major chal
 The search tool utilizes the open-source [SearXNG](https://github.com/searxng/searxng) metasearch engine to collect information from multiple internet sources. It uses a [reranking model](https://huggingface.co/mixedbread-ai/mxbai-rerank-large-v1) to rank the returned results by relevance, and employs a locally deployed [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF) model to process search results and generate a response. The tool was specifically designed to work with smaller models like [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF), which has a limited context size of 8192 tokens and fewer capabilities compared to larger open-source models such as Llama3-70B, or commercial models like GPT-4.
 Instead of passing all the information from an internet search directly to the model for response generation - a strategy suited to larger models - the tool implements multiple pre-processing steps for each search result. It extracts the most relevant information and compiles a single summary for each webpage. This process allows the response generation LLM to focus on the information most relevant to the query and ensures that the context size limit is not exceeded.
 
-The internet search tool is a component of the [bot-with-plan](README.md) project. It can be used either as a standalone tool or by an agent equipped with tool-handling capabilities. This is illustrated in [Planner fine-tuning on synthetic agent trajectories](planner_finetuned.ipynb) where the internet search tool is integrated into an agentic workflow that uses tools, implementing an agentic RAG approach.
+The internet search tool is a component of the [bot-with-plan](https://github.com/krasserm/bot-with-plan) project. It can be used either as a standalone tool or by an agent equipped with tool-handling capabilities. This is illustrated in [Planner fine-tuning on synthetic agent trajectories](https://krasserm.github.io/2024/05/31/planner-fine-tuning/) where the internet search tool is integrated into an agentic workflow that uses tools, implementing an agentic RAG approach.
 
 ### Exploring the Internet Search RAG Pipeline
 
@@ -32,7 +32,7 @@ The image below outlines the different stages of the internet search RAG pipelin
 
 #### Stage 1: Query Transformation
 
-Queries are typically expressed in natural language and often include extraneous details that might degrade the effectiveness of a search engine. To adress this issue, queries are processed by a [LLM-based query rewriter](./gba/tools/search/query.py) ([Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF)). This component filters out irrelevant information and refines the input query into an optimized search query that is better suited for internet search engines.
+Queries are typically expressed in natural language and often include extraneous details that might degrade the effectiveness of a search engine. To adress this issue, queries are processed by a [LLM-based query rewriter](https://github.com/krasserm/bot-with-plan/blob/master/gba/tools/search/query.py) ([Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF)). This component filters out irrelevant information and refines the input query into an optimized search query that is better suited for internet search engines.
 
 The query from our example *"What is the name of the latest NASA rover sent to Mars, when was it launched, and from which location?"* is transformed into the following search query:
 
@@ -96,7 +96,7 @@ After reranking the content nodes, the *top-k* nodes are selected for every webp
 
 #### Stage 4: Information extraction
 
-In this stage, each webpage document is processed by a [LLM-based content extractor](./gba/tools/search/extract.py) that uses a [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF) model. The model is instructed to extract key information from a webpage document and create a concise summary. This removes unnecessary details, enabling the LLM in the subsequent response generation stage to focus on the essential information relevant to answer the query.
+In this stage, each webpage document is processed by a [LLM-based content extractor](https://github.com/krasserm/bot-with-plan/blob/master/gba/tools/search/extract.py) that uses a [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF) model. The model is instructed to extract key information from a webpage document and create a concise summary. This removes unnecessary details, enabling the LLM in the subsequent response generation stage to focus on the essential information relevant to answer the query.
 
 The following output shows the information extracted from the snippet and content nodes retrieved from `https://en.wikipedia.org/wiki/Perseverance_(rover)` in the previous stages:
 
@@ -108,7 +108,7 @@ The name and launch date of the Mars rover is extracted from the webpage snippet
 
 #### Stage 5: Response generation
 
-In the final stage of the pipeline a LLM ([Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF)) is [instructed](./gba/tools/search/search_internet.py#L25) to generate a response to the query using only the webpage documents prepared in the previous stage. This approach is crucial as it restricts the LLM to the provided context, reducing tendencies to produce responses based on outdated or unsupported information (i.e. hallucinations).
+In the final stage of the pipeline a LLM ([Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF)) is [instructed](https://github.com/krasserm/bot-with-plan/blob/master/gba/tools/search/search_internet.py#L25) to generate a response to the query using only the webpage documents prepared in the previous stage. This approach is crucial as it restricts the LLM to the provided context, reducing tendencies to produce responses based on outdated or unsupported information (i.e. hallucinations).
 
 The following shows the response of the search tool for our example query *"What is the name of the latest NASA rover sent to Mars, when was it launched, and from which location?"*
 
@@ -119,7 +119,7 @@ The latest NASA rover sent to Mars is the Perseverance rover, which was launched
 ### Usage and examples
 
 The internet search tool requires a locally deployed instance of [SearXNG](https://github.com/searxng/searxng) and a [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF) model served using [llama.cpp](https://github.com/ggerganov/llama.cpp).
-To get started, follow the setup instructions outlined [here](./gba/tools/search/README.md#search-internet-tool) to setup SearXNG and [here](README.md#getting-started) to install the required dependencies and serve the model (skip downloads for other mentioned models).
+To get started, follow the setup instructions outlined [here](https://github.com/krasserm/bot-with-plan/blob/master/gba/tools/search/README.md#search-internet-tool) to setup SearXNG and [here](https://github.com/krasserm/bot-with-plan/blob/master/README.md#getting-started) to install the required dependencies and serve the model (skip downloads for other mentioned models).
 
 The `SearchInternetTool` is instantiated with the specified SearXNG endpoint, alongside the LLM and the reranker:
 
