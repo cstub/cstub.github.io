@@ -1,7 +1,7 @@
 ---
 title:  Enhancing Internet Search with RAG and Open Large Language Models
 description: >-
-  Creating an internet search tool using Retrieval-Augmented Generation and open-source Large Language Models.
+  An internet search tool using Retrieval-Augmented Generation and open-source Large Language Models to answer questions in natural language.
 date:   2024-06-10 12:15:06 +0200
 categories: [Machine Learning]
 tags: [RAG, LLM]
