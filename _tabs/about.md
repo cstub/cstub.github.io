@@ -5,13 +5,15 @@ order: 1
 
 ### About me
 
-I am a seasoned Machine Learning and AI Engineer with extensive experience in the development and deployment of machine learning and deep learning models. My expertise spans from creating robust systems from scratch to scaling them in large production environments. 
-I specialize in customizing algorithms to meet business objectives, optimizing system performance, and integrating them seamlessly with existing technologies.
+As a Machine Learning Engineer, my expertise lies at the intersection of AI innovation and practical application.
+I develop and deploy machine learning and deep learning models, specializing in constructing robust machine learning systems from concept to large-scale production environments. My expertise includes tailoring algorithms to business needs, optimizing performance, and ensuring scalable integration into existing technologies.
+I am deeply interested in machine learning and deep learning methodologies, consistently striving to keep up-to-date with the latest developments in the field.
 
-I have a strong track record in designing and implementing distributed architectures and have built a wide variety of reactive systems. From 2015 to 2018 I led the development of a reactive microservice framework and helped creating a distributed messaging infrastructure for event-driven application communication. 
-My approach emphasizes clean, concise coding practices that enhance system resilience.
+I am highly proficient in designing and implementing distributed architectures and have built a wide variety of reactive systems. From 2015 to 2018 I led the development of a reactive microservice framework and helped creating a distributed messaging infrastructure for event-driven application communication.
 
-I am committed to continuous learning, constantly exploring new technologies and innovative approaches to enhance software solutions. 
+I am an advocate of clean concise code and practices promoting resilient software systems, employing these methods in my daily work.
+
+An essential part of my professional life is the pursuit of new skills, experimenting with innovative technologies and discovering new approaches to solving problems with software.
 
 If you have a project I can help with, please get in touch.
 
