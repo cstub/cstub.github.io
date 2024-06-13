@@ -11,7 +11,7 @@ This article introduces an internet search tool based on [Retrieval-Augmented Ge
 
 The tool is designed for local deployment, utilizing smaller open LLMs (specifically [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF)) and a local metasearch engine. This setup eliminates the need for external search-API keys.
 
-To dive straight into using the tool, skip ahead to the [Usage and examples](#usage-and-examples) section or run the accompanying [notebook](https://github.com/krasserm/bot-with-plan/blob/master/internet_search.ipynb).
+The internet search tool is a component of the [bot-with-plan](https://github.com/krasserm/bot-with-plan) project. To dive straight into using the tool, skip ahead to the [Usage and examples](#usage-and-examples) section or run the accompanying [notebook](https://github.com/krasserm/bot-with-plan/blob/master/internet_search.ipynb).
 
 ### Improving Search Accuracy and Relevance with RAG
 
@@ -20,7 +20,7 @@ Answering questions with large language models (LLMs) alone faces two major chal
 The search tool utilizes the open-source [SearXNG](https://github.com/searxng/searxng) metasearch engine to collect information from multiple internet sources. It uses a [reranking model](https://huggingface.co/mixedbread-ai/mxbai-rerank-large-v1) to rank the returned results by relevance, and employs a locally deployed [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF) model to process search results and generate a response. The tool was specifically designed to work with smaller models like [Llama3-8B](https://huggingface.co/krasserm/Meta-Llama-3-8B-Instruct-GGUF), which has a limited context size of 8192 tokens and fewer capabilities compared to larger open-source models such as Llama3-70B, or commercial models like GPT-4.
 Instead of passing all the information from an internet search directly to the model for response generation - a strategy suited to larger models - the tool implements multiple pre-processing steps for each search result. It extracts the most relevant information and compiles a single summary for each webpage. This process allows the response generation LLM to focus on the information most relevant to the query and ensures that the context size limit is not exceeded.
 
-The internet search tool is a component of the [bot-with-plan](https://github.com/krasserm/bot-with-plan) project. It can be used either as a standalone tool or by an agent equipped with tool-handling capabilities. This is illustrated in [Planner fine-tuning on synthetic agent trajectories](https://krasserm.github.io/2024/05/31/planner-fine-tuning/) where the internet search tool is integrated into an agentic workflow that uses tools, implementing an agentic RAG approach.
+The internet search tool can be used either as a standalone tool or by an agent equipped with tool-handling capabilities. This is illustrated in [Planner fine-tuning on synthetic agent trajectories](https://krasserm.github.io/2024/05/31/planner-fine-tuning/) where the internet search tool is integrated into an agentic workflow that uses tools, implementing an agentic RAG approach.
 
 ### Exploring the Internet Search RAG Pipeline
 
