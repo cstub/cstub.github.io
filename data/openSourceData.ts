@@ -20,7 +20,7 @@ Code action agents have the capability to write and execute code directly to sol
 
 I actively contribute to the project, working on model integrations, performance evaluations, and developing practical agent use cases.
 
-This [demo](https://www.youtube.com/watch?v=M0T5ebMDvN0) of freeact shows how an agent dynamically generates and executes code to perform web searches and deliver precise answers based on real-time data.
+This [demo](https://www.youtube.com/watch?v=M0T5ebMDvN0) of freeact shows how an agent dynamically generates and executes code to perform web searches and return accurate answers based on real-time data.
         `,
       isOwnProject: false,
       contribution: 'https://github.com/search?q=repo%3Agradion-ai%2Ffreeact+author%3Acstub&type=commits&s=committer-date&o=asc',

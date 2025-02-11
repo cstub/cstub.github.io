@@ -194,7 +194,7 @@ Code action agents have the capability to write and execute code directly to sol
 
 I actively contribute to the project, working on model integrations, performance evaluations, and developing practical agent use cases.
 
-This demo of freeact shows how an agent dynamically generates and executes code to perform web searches and deliver precise answers based on real-time data.
+This demo of freeact shows how an agent dynamically generates and executes code to perform web searches and return accurate answers based on real-time data.
 
 Technologies: Python, Anthropic, Open AI, Gemini
 
