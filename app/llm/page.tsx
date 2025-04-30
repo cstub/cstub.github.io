@@ -40,16 +40,18 @@ export default function LLMInput() {
             <CodeBlock>
               {`# Personal Information
 
-## Hello, I'm Christoph
+## About Me
 
 I am a freelance AI engineer with a strong background in machine learning, MLOps and distributed systems. 
 I have over 5 years of experience building AI systems and more than a decade designing distributed systems.
 
-I work through every phase of the AI lifecycle—from early prototypes to large-scale production systems. 
-I combine the latest AI research with practical engineering, working closely with my clients to ensure our projects go well beyond research 
-demos and deliver value in production.
+I work through every phase of the AI lifecycle—from early prototypes to large-scale production systems.
 
-Outside of client projects, I'm also engaged in open-source work and exploratory research, currently focusing on cognitive architectures and agent-based systems.
+As the co-founder of gradion.ai, I'm building autonomous AI agents designed to act as virtual team members that automate business processes.
+
+Outside of client projects, I'm also engaged in [open-source work](/open-source).
+
+## Professional Journey
 
 I've helped companies like MerlinOne and Canto build and deploy large-scale AI search platforms that process and index millions of images and videos 
 in real time, combining distributed inference (PyTorch, Triton, Kubernetes) with distributed vector databases (Milvus) for scalable, 
