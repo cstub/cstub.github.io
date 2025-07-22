@@ -15,7 +15,7 @@ interface PortfolioEntry {
       client: 'Gradion AI',
       role: 'Founder',
       description:
-        `We are an **IT consulting firm specializing in machine learning and agentic AI projects**. With extensive expertise in ML and AI, combined with decades of experience in software development and systems engineering, we create custom solutions that are **intelligent, meet customer requirements and perform reliably in production environments**. 
+        `We are an **IT consulting firm specializing in machine learning and agentic AI projects**. With extensive expertise in ML and AI, combined with decades of experience in software development and systems engineering, we create custom solutions that are intelligent, meet customer requirements and perform reliably in production environments.
         
 In-house, we are currently developing a group of AI agents collaborating with us to run our business. Our focus is on agents that collaborate with entire teams, rather than just individual users. To be most useful for team members, we provide agents with the full context of team dynamics. We also conduct research on agents capable of collaborative and autonomous skill learning.`,
       responsibilities: [        
