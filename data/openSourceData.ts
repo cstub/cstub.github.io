@@ -12,18 +12,30 @@ interface OpenSourceEntry {
   
   const openSourceData: OpenSourceEntry[] = [
     {
-      title: 'Freeact: Autonomous Agents using Code Actions',      
+      title: 'Hybrid Groups',      
       description:
-        `Freeact is a lightweight library that empowers AI agents to solve complex and open-ended problems using [code actions](https://arxiv.org/abs/2402.01030). 
-
-Code action agents have the capability to write and execute code directly to solve tasks and interact with their environment. This allows them to freely combine predefined tools or develop new ones using the extensive Python ecosystem, significantly enhancing their problem-solving capabilities and adaptability. 
-
-I actively contribute to the project, working on model integrations, performance evaluations, and developing practical agent use cases.
+        `Hybrid Groups is a multi-user, multi-agent collaboration platform that enables users to interact with both agents and other users in group chats on Slack and GitHub. Agents act and respond according to each user's identity, preferences and privileges, enabling secure access to a user's private resources while collaborating in a team.
+        `,
+      isOwnProject: true,
+      technologies: [
+        'Python', 
+        'Pydantic AI', 
+        'Anthropic',        
+        'Open AI',  
+        'Gemini',      
+      ],
+      imgSrc: '/static/images/hybrid-groups.webp',
+      href: 'https://github.com/gradion-ai/hybrid-groups',
+      repo_id: 'gradion-ai/hybrid-groups',
+    },
+    {
+      title: 'freeact',      
+      description:
+        `*freeact* is a lightweight AI agent library using Python as the common language to define executable actions and tool interfaces. This is in contrast to traditional approaches where actions and tools are described with JSON. A unified code-based approach enables *freeact* agents to reuse actions from earlier steps as tools or skills in later steps. This design allows agents to build on their previous work and compose more complex actions from simpler ones. 
 
 This [demo](https://www.youtube.com/watch?v=M0T5ebMDvN0) of freeact shows how an agent dynamically generates and executes code to perform web searches and return accurate answers based on real-time data.
         `,
-      isOwnProject: false,
-      contribution: 'https://github.com/search?q=repo%3Agradion-ai%2Ffreeact+author%3Acstub&type=commits&s=committer-date&o=asc',
+      isOwnProject: true,
       technologies: [
         'Python', 
         'Anthropic',        
@@ -82,7 +94,7 @@ I made various improvements to the library and implemented:
       repo_id: 'krasserm/perceiver-io',      
     },
     {
-      title: 'A machine learning based Intrusion Detection System',      
+      title: 'A ML-based Intrusion Detection System',      
       description:
         `This project is a proof of concept for a machine learning-based system able to identify malicious network traffic. It addresses the limitations of traditional signature-based methods by learning normal network behavior from benign data packets, enabling the system to detect anomalous data flows and potentially novel types of attacks. 
         

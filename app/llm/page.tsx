@@ -86,8 +86,15 @@ FastAPI, Flask, Apache Kafka, Apache Spark, Delta Lake, Databricks
 
 🌐 Infrastructure
 Docker, Kubernetes, AWS, Azure, Google Cloud Platform, Terraform, GitHub Actions
-
 # Portfolio
+
+## AI Engineering and Consulting Services
+Client: Gradion AI
+Role: Founder
+
+We are an IT consulting firm specializing in machine learning and agentic AI projects. With extensive expertise in ML and AI, combined with decades of experience in software development and systems engineering, we create custom solutions that are intelligent, meet customer requirements and perform reliably in production environments. 
+        
+In-house, we are currently developing a group of AI agents collaborating with us to run our business. Our focus is on agents that collaborate with entire teams, rather than just individual users. To be most useful for team members, we provide agents with the full context of team dynamics. We also conduct research on agents capable of collaborative and autonomous skill learning.
 
 ## Enterprise-Scale Visual Search
 Client: Canto Inc.
@@ -188,15 +195,15 @@ Technologies: Java, Spring Boot
 
 # Open Source Projects
 
-## Freeact: Autonomous Agents using Code Actions
+## Hybrid Groups
 
-Freeact is a lightweight library that empowers AI agents to solve complex and open-ended problems using code actions. 
+Hybrid Groups is a multi-user, multi-agent collaboration platform that enables users to interact with both agents and other users in group chats on Slack and GitHub. Agents act and respond according to each user's identity, preferences and privileges, enabling secure access to a user's private resources while collaborating in a team.
 
-Code action agents have the capability to write and execute code directly to solve tasks and interact with their environment. This allows them to freely combine predefined tools or develop new ones using the extensive Python ecosystem, significantly enhancing their problem-solving capabilities and adaptability. 
+Technologies: Python, Pydantic AI, Anthropic, Open AI, Gemini
 
-I actively contribute to the project, working on model integrations, performance evaluations, and developing practical agent use cases.
+## freeact
 
-This demo of freeact shows how an agent dynamically generates and executes code to perform web searches and return accurate answers based on real-time data.
+*freeact* is a lightweight AI agent library using Python as the common language to define executable actions and tool interfaces. This is in contrast to traditional approaches where actions and tools are described with JSON. A unified code-based approach enables *freeact* agents to reuse actions from earlier steps as tools or skills in later steps. This design allows agents to build on their previous work and compose more complex actions from simpler ones. 
 
 Technologies: Python, Anthropic, Open AI, Gemini
 
